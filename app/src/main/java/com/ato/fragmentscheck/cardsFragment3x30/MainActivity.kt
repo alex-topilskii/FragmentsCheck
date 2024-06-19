@@ -1,9 +1,10 @@
-package com.ato.fragmentscheck
+package com.ato.fragmentscheck.cardsFragment3x30
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.ato.fragmentscheck.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.ato.fragmentscheck
+package com.ato.fragmentscheck.cardsFragment3x30
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

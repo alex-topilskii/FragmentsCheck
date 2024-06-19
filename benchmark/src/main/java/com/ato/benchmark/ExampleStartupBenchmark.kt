@@ -1,10 +1,13 @@
 package com.ato.benchmark
 
+import android.content.ComponentName
+import android.content.Intent
 import androidx.benchmark.macro.CompilationMode
 import androidx.benchmark.macro.StartupMode
 import androidx.benchmark.macro.StartupTimingMetric
 import androidx.benchmark.macro.junit4.MacrobenchmarkRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.ato.fragmentscheck.simpleActivity.SimpleActivity
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -27,13 +30,58 @@ class ExampleStartupBenchmark {
     val benchmarkRule = MacrobenchmarkRule()
 
     @Test
-    fun startup() = benchmarkRule.measureRepeated(
+    fun check_simple_activtiy() = benchmarkRule.measureRepeated(
+        setupBlock = {
+            val intent = Intent().apply {
+                action = Intent.ACTION_VIEW
+                addCategory(Intent.CATEGORY_BROWSABLE)
+                setPackage(packageName)
+                component = ComponentName(packageName, "com.ato.fragmentscheck.simpleActivity.SimpleActivity")
+            }
+
+            startActivityAndWait(intent)
+        },
         packageName = "com.ato.fragmentscheck",
         metrics = listOf(StartupTimingMetric()),
         iterations = 5,
         startupMode = StartupMode.COLD
     ) {
         pressHome()
-        startActivityAndWait()
+        val intent = Intent().apply {
+            action = Intent.ACTION_VIEW
+            addCategory(Intent.CATEGORY_BROWSABLE)
+            setPackage(packageName)
+            component = ComponentName(packageName, "com.ato.fragmentscheck.simpleActivity.SimpleActivity")
+        }
+
+        startActivityAndWait(intent)
+    }
+
+    @Test
+    fun check_3x30_activtiy() = benchmarkRule.measureRepeated(
+        setupBlock = {
+            val intent = Intent().apply {
+                action = Intent.ACTION_VIEW
+                addCategory(Intent.CATEGORY_BROWSABLE)
+                setPackage(packageName)
+                component = ComponentName(packageName, "com.ato.fragmentscheck.simpleActivity.SimpleActivity")
+            }
+
+            startActivityAndWait(intent)
+        },
+        packageName = "com.ato.fragmentscheck",
+        metrics = listOf(StartupTimingMetric()),
+        iterations = 5,
+        startupMode = StartupMode.COLD
+    ) {
+        pressHome()
+        val intent = Intent().apply {
+            action = Intent.ACTION_VIEW
+            addCategory(Intent.CATEGORY_BROWSABLE)
+            setPackage(packageName)
+            component = ComponentName(packageName, "com.ato.fragmentscheck.cardsFragment3x30.MainActivity")
+        }
+
+        startActivityAndWait(intent)
     }
 }

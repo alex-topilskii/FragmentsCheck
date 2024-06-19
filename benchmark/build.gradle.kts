@@ -40,6 +40,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":app"))
+
     implementation(libs.androidx.junit)
     implementation(libs.androidx.espresso.core)
     implementation(libs.androidx.uiautomator)

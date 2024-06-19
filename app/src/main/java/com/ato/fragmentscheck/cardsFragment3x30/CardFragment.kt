@@ -1,4 +1,4 @@
-package com.ato.fragmentscheck
+package com.ato.fragmentscheck.cardsFragment3x30
 
 import android.graphics.Color
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.ato.fragmentscheck.R
 import kotlin.random.Random
 
 
