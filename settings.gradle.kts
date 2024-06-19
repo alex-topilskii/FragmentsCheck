@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "FragmentsCheck"
 include(":app")
- 
+include(":benchmark")
