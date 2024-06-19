@@ -44,7 +44,7 @@
 <img src="images/demo2.png" width="200"/>
 
 ### 3x30x4 No Fragments Activity
-<img src="images/demo33.png" width="200"/>
+<img src="images/demo3.png" width="200"/>
 
 ## Заключение
 
