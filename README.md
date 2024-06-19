@@ -28,7 +28,7 @@
 | Simple Activity              | 877.5    | 929.8       | 968.3    | <img src="images/demo0.png" width="100"/> |
 | 3x30 Activity                | 1,324.1  | 1,353.1     | 1,698.4  | <img src="images/demo1.png" width="100"/> |
 | 3x30x4 Activity              | 1,734.6  | 1,751.4     | 2,164.0  | <img src="images/demo2.png" width="100"/> |
-| 3x30x4 No Fragments Activity | 1,823.1  | 1,859.1     | 2,528.7  | <img src="images/demo3.png" width="100"/> |
+| 3x30x4 No Fragments Activity | 1,823.1  | 1,859.1     | 2,528.7  | <img src="images/demo4.png" width="100"/> |
 
 ## Скриншоты
 
@@ -44,7 +44,7 @@
 <img src="images/demo2.png" width="200"/>
 
 ### 3x30x4 No Fragments Activity
-<img src="images/demo3.png" width="200"/>
+<img src="images/demo4.png" width="200"/>
 
 ## Заключение
 
