@@ -10,9 +10,9 @@ class SliderTransformer(private val offscreenPageLimit: Int) : ViewPager2.PageTr
     companion object {
 
         private const val DEFAULT_TRANSLATION_X = .0f
-        private const val DEFAULT_TRANSLATION_FACTOR = 1.1f
+        private const val DEFAULT_TRANSLATION_FACTOR = 1.02f
 
-        private const val SCALE_FACTOR = .04f
+        private const val SCALE_FACTOR = .01f
         private const val DEFAULT_SCALE = 1f
 
         private const val ALPHA_FACTOR = .01f
