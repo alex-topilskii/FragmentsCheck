@@ -2,48 +2,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="8dp"
     android:elevation="4dp">
 
-    <androidx.fragment.app.FragmentContainerView
+    <TextView
         android:id="@+id/container1"
-        android:name="com.ato.fragmentscheck.cardsFragment3x30x4.BlankFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/container2"
         app:layout_constraintBottom_toTopOf="@id/container3"/>
 
 
-    <androidx.fragment.app.FragmentContainerView
+    <TextView
         android:id="@+id/container2"
-        android:name="com.ato.fragmentscheck.cardsFragment3x30x4.BlankFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/container1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/container4"/>
 
 
-    <androidx.fragment.app.FragmentContainerView
+    <TextView
         android:id="@+id/container3"
-        android:name="com.ato.fragmentscheck.cardsFragment3x30x4.BlankFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/container1"
         app:layout_constraintEnd_toStartOf="@id/container4"/>
 
 
-    <androidx.fragment.app.FragmentContainerView
+    <TextView
         android:id="@+id/container4"
-        android:name="com.ato.fragmentscheck.cardsFragment3x30x4.BlankFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@id/container2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
