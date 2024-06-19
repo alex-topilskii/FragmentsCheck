@@ -31,16 +31,6 @@ class ExampleStartupBenchmark {
 
     @Test
     fun check_simple_activtiy() = benchmarkRule.measureRepeated(
-        setupBlock = {
-            val intent = Intent().apply {
-                action = Intent.ACTION_VIEW
-                addCategory(Intent.CATEGORY_BROWSABLE)
-                setPackage(packageName)
-                component = ComponentName(packageName, "com.ato.fragmentscheck.simpleActivity.SimpleActivity")
-            }
-
-            startActivityAndWait(intent)
-        },
         packageName = "com.ato.fragmentscheck",
         metrics = listOf(StartupTimingMetric()),
         iterations = 5,
@@ -59,16 +49,6 @@ class ExampleStartupBenchmark {
 
     @Test
     fun check_3x30_activtiy() = benchmarkRule.measureRepeated(
-        setupBlock = {
-            val intent = Intent().apply {
-                action = Intent.ACTION_VIEW
-                addCategory(Intent.CATEGORY_BROWSABLE)
-                setPackage(packageName)
-                component = ComponentName(packageName, "com.ato.fragmentscheck.simpleActivity.SimpleActivity")
-            }
-
-            startActivityAndWait(intent)
-        },
         packageName = "com.ato.fragmentscheck",
         metrics = listOf(StartupTimingMetric()),
         iterations = 5,
@@ -79,7 +59,25 @@ class ExampleStartupBenchmark {
             action = Intent.ACTION_VIEW
             addCategory(Intent.CATEGORY_BROWSABLE)
             setPackage(packageName)
-            component = ComponentName(packageName, "com.ato.fragmentscheck.cardsFragment3x30.MainActivity")
+            component = ComponentName(packageName, "com.ato.fragmentscheck.cardsFragment3x30.Activity3x30")
+        }
+
+        startActivityAndWait(intent)
+    }
+
+    @Test
+    fun check_3x30x4_activtiy() = benchmarkRule.measureRepeated(
+        packageName = "com.ato.fragmentscheck",
+        metrics = listOf(StartupTimingMetric()),
+        iterations = 5,
+        startupMode = StartupMode.COLD
+    ) {
+        pressHome()
+        val intent = Intent().apply {
+            action = Intent.ACTION_VIEW
+            addCategory(Intent.CATEGORY_BROWSABLE)
+            setPackage(packageName)
+            component = ComponentName(packageName, "com.ato.fragmentscheck.cardsFragment3x30x4.Activity3x30x4")
         }
 
         startActivityAndWait(intent)
