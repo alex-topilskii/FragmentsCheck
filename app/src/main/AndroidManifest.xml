@@ -16,18 +16,17 @@
             android:name=".simpleActivity.SimpleActivity"
             android:exported="true"
             android:theme="@style/Theme.FragmentsCheck" >
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
             android:name=".cardsFragment3x30x4.Activity3x30x4"
             android:exported="true"
             android:theme="@style/Theme.FragmentsCheck" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <profileable
@@ -37,8 +36,6 @@
         <activity
             android:name=".cardsFragment3x30.Activity3x30"
             android:exported="true">
-
-
 
         </activity>
     </application>
