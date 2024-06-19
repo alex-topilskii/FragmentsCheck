@@ -17,18 +17,53 @@ class CardFragment4NoFragments : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_card_4_no_fragments, container, false)
-        view.findViewById<TextView>(R.id.container1).text = "${Random.nextInt(1000)}"
-        view.findViewById<TextView>(R.id.container2).text = "${Random.nextInt(1000)}"
-        view.findViewById<TextView>(R.id.container3).text = "${Random.nextInt(1000)}"
-        view.findViewById<TextView>(R.id.container4).text = "${Random.nextInt(1000)}"
+
+        view.findViewById<TextView>(R.id.container1).apply {
+            text = "${Random.nextInt(1000)}"
+            val color = Color.argb(
+                /* alpha = */ 255,
+                /* red = */ Random.nextInt(256),
+                /* green = */ Random.nextInt(256),
+                /* blue = */ Random.nextInt(256)
+            )
+            setBackgroundColor(color)
+        }
+        view.findViewById<TextView>(R.id.container2).apply {
+            val color = Color.argb(
+                /* alpha = */ 255,
+                /* red = */ Random.nextInt(256),
+                /* green = */ Random.nextInt(256),
+                /* blue = */ Random.nextInt(256)
+            )
+            setBackgroundColor(color)
+            text = "${Random.nextInt(1000)}"
+        }
+        view.findViewById<TextView>(R.id.container3).apply {
+            val color = Color.argb(
+                /* alpha = */ 255,
+                /* red = */ Random.nextInt(256),
+                /* green = */ Random.nextInt(256),
+                /* blue = */ Random.nextInt(256)
+            )
+            setBackgroundColor(color)
+            text = "${Random.nextInt(1000)}"
+        }
+        view.findViewById<TextView>(R.id.container4).apply {
+            val color = Color.argb(
+                /* alpha = */ 255,
+                /* red = */ Random.nextInt(256),
+                /* green = */ Random.nextInt(256),
+                /* blue = */ Random.nextInt(256)
+            )
+            setBackgroundColor(color)
+            text = "${Random.nextInt(1000)}"
+        }
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val color = Color.argb(255, Random.nextInt(256), Random.nextInt(256), Random.nextInt(256))
-        view.setBackgroundColor(color)
 
     }
 }
