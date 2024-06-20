@@ -14,22 +14,6 @@
 | 3x30x4 Activity <br> - Проверяет время запуска активности с тремя view pager, в каждом из которых 30 фрагментов и в каждом фрагменте еще 4 фрагмента <br> - итого 360 фрагментов             | 1,734.6  | 1,751.4     | 2,164.0  | <img src="images/demo2.png" width="100"/> |
 | 3x30x4 No Fragments Activity <br> - Проверяет время запуска активности с тремя view pager, в каждом из которых 30 фрагментов, и внутри которых 4 textview <br> - итого 90 фрагменто <br> - позволяет в сравнении с Activity3x30x4 понять, как повлияет уменьшение 360 -> 90 фрагментов на перформанс | 1,823.1  | 1,859.1     | 2,528.7  | <img src="images/demo4.png" width="100"/> |
 
-## Скриншоты
-
-Ниже можно насладиться экранами соответствующих активностей:
-
-### Simple Activity
-<img src="images/demo0.png" width="200"/>
-
-### 3x30 Activity
-<img src="images/demo1.png" width="200"/>
-
-### 3x30x4 Activity
-<img src="images/demo2.png" width="200"/>
-
-### 3x30x4 No Fragments Activity
-<img src="images/demo4.png" width="200"/>
-
 ## Заключение
 
 Замеры происходили 
